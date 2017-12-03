@@ -7,7 +7,7 @@
   <body>
     <h1>Index Bake</h1>
     <% for (let cactus of bakeCactus){%>
-      <h2><%=cactus.title%></h2>
+      <a href="<%=cactus._id%>"><img src="<%=cactus.url%>"></a>
   <% } %>
   </body>
 </html>

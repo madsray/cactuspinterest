@@ -5,9 +5,9 @@
     <title>Index CLothes</title>
   </head>
   <body>
-    <h1>clothes index</h1>
+    <h1>Index Clothes</h1>
     <% for (let cactus of clothesCactus){%>
-      <h2><%=cactus.title%></h2>
+      <a href="<%=cactus._id%>"><img src="<%=cactus.url%>"></a>
   <% } %>
   </body>
 </html>

@@ -35,10 +35,12 @@ router.get('/new', async(req,res) => {
 }
 });
 //+++++++++++++CREATE +++++++++++++++++++++++++++
-router.post('/', async (req,res)=>{
+
+router.post('/bake', async (req,res)=>{
+  console.log(req.body);
   try {
     const createdCactus = await Cactus.create(req.body);
-    res.redirect('/');
+    res.redirect('./'+ createdCactus.id);
   } catch (err) {
     res.send(err.message);
   }
