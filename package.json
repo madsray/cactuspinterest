@@ -1,0 +1,28 @@
+{
+  "name": "cactuspinterest",
+  "version": "1.0.0",
+  "description": "who doesn't love pinterest? And I love cactus!",
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.13.5",
+    "morgan": "^1.9.0",
+    "pretty-error": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madsray/cactuspinterest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madsray/cactuspinterest/issues"
+  },
+  "homepage": "https://github.com/madsray/cactuspinterest#readme"
+}
