@@ -7,8 +7,25 @@ const Cactus     = require ( '../models/cactus.js' );
 //+++++++++++++INDEX+++++++++++++++++++++++++
 router.get('/', async (req,res) => {
     const allCactus = await Cactus.find();
-    res.render('./index.ejs', {allCactus});
+    res.render('./indexNav.ejs', {allCactus});
 });
+router.get('/bake', async (req,res) => {
+    const bakeCactus = await Cactus.find({category: "Bake"});
+    res.render('./indexBake.ejs', {bakeCactus});
+});
+router.get('/plants', async (req,res) => {
+    const plantsCactus = await Cactus.find({category: "Plants"});
+    res.render('./indexPlants.ejs', {plantsCactus});
+});
+router.get('/crafts', async (req,res) => {
+    const craftsCactus = await Cactus.find({category: "Crafts"});
+    res.render('./indexCrafts.ejs', {craftsCactus});
+});
+router.get('/clothes', async (req,res) => {
+    const clothesCactus = await Cactus.find({category: "Clothes"});
+    res.render('./indexClothes.ejs', {clothesCactus});
+});
+
 //+++++++++++++++NEW++++++++++++++++++++++++++
 router.get('/new', async(req,res) => {
   try {
@@ -16,7 +33,7 @@ router.get('/new', async(req,res) => {
 } catch (err){
   res.send(err.message);
 }
-})
+});
 //+++++++++++++CREATE +++++++++++++++++++++++++++
 router.post('/', async (req,res)=>{
   try {
@@ -25,12 +42,12 @@ router.post('/', async (req,res)=>{
   } catch (err) {
     res.send(err.message);
   }
-})
+});
 // +++++++++++++++SHOW+++++++++++++++++++++++++++
   router.get('/:id', async (req,res) => {
     const oneCactus = await Cactus.findById(req.params.id);
     res.render('../views/show.ejs', {oneCactus});
-  })
+  });
 
 
 
