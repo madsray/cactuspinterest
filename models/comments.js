@@ -8,4 +8,4 @@ const commentSchema = mongoose.Schema({
   cactus: {type: mongoose.Schema.Types.ObjectId, ref:'id'}
 });
 
-module.exports = mongoose.model('Comments', commentsSchema);
+module.exports = mongoose.model('Comments', commentSchema);

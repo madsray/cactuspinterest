@@ -16,19 +16,20 @@ db.on('error', (err) => console.log(err.message));
 db.on('connected', () => console.log('Mongo running: ', mongoURI));
 
 // controllers
-const photosController = require('./controllers/cactus.js');
-const commentController = require('./controllers/comments.js');
+const cactusController = require('./controllers/cactus.js');
+// const commentsController = require('./controllers/comments.js');
 
 // middleware
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(override('_method'));
+
 app.use('/cactus', cactusController);
-app.use('/comments', commentsController);
+// app.use('/comments', commentsController);
 
 // // root route
-// app.get('/', (req, res) => res.redirect('/photos'));
+app.get('/', (req, res) => res.redirect('/cactus'));
 
 // :ear
 app.listen(PORT, () => {
