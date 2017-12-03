@@ -26,10 +26,11 @@ router.post('/', async (req,res)=>{
     res.send(err.message);
   }
 })
-//+++++++++++++++SHOW+++++++++++++++++++++++++++
-  // router.get('/:id', async (req,res) => {
-  //   const oneCactus =
-  // })
+// +++++++++++++++SHOW+++++++++++++++++++++++++++
+  router.get('/:id', async (req,res) => {
+    const oneCactus = await Cactus.findById(req.params.id);
+    res.render('../views/show.ejs', {oneCactus});
+  })
 
 
 
