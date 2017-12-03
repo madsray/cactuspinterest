@@ -10,13 +10,13 @@ router.get('/', async (req,res) => {
     res.render('./index.ejs', {allCactus});
 });
 //+++++++++++++++NEW++++++++++++++++++++++++++
-// router.get('/new', async(req,res) => {
-//   try {
-//   res.render('../views/new.ejs');
-// } catch (err){
-//   res.send(err.message);
-// }
-// })
+router.get('/new', async(req,res) => {
+  try {
+  res.render('../views/new.ejs');
+} catch (err){
+  res.send(err.message);
+}
+})
 //+++++++++++++CREATE +++++++++++++++++++++++++++
 router.post('/', async (req,res)=>{
   try {
