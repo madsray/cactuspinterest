@@ -3,6 +3,7 @@ const express     = require ( 'express' );
 const router    = express.Router();
 //get access to the Product model
 const Cactus     = require ( '../models/cactus.js' );
+const Comments = require('../models/comments.js');
 //___________________
 //+++++++++++++INDEX+++++++++++++++++++++++++
 router.get('/', async (req,res) => {
@@ -48,7 +49,11 @@ router.post('/bake', async (req,res)=>{
 // +++++++++++++++SHOW+++++++++++++++++++++++++++
   router.get('/:id', async (req,res) => {
     const oneCactus = await Cactus.findById(req.params.id);
-    res.render('../views/show.ejs', {oneCactus});
+    const manyComments = await Comments.find({ cactus: oneCactus._id});
+
+    res.render('../views/show.ejs', {oneCactus, manyComments});
+
+
   });
 
 
