@@ -3,14 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Show</title>
+    <% include ../partials/head.ejs %>
   </head>
   <body>
     <% include ../partials/home.ejs %>
+
     <h1>Show</h1>
     <img src="<%=oneCactus.url%>">
 
     <% for (let comment of manyComments) { %>
-      <h1><%= comment.author %>:<%= comment.content %></h1>
+      <h1><%= comment.author %>:<%= comment.content %> </h1>
+      <form action="/comments/<%=comment._id%>?_method=DELETE" method=POST>
+      <button ><span class="glyphicon glyphicon-trash"></span></button>
+    </form>
+
   <% } %>
     <h3>Add a comment</h3>
     <form action="/comments" method="POST">
