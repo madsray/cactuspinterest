@@ -2,11 +2,11 @@ const express  = require('express');
 const mongoose = require('mongoose');
 const morgan   = require('morgan');
 const app      = express();
-const PORT     = 3000;
+const PORT     = process.env.PORT || 3000;
 const override = require('method-override');
 
 // connect to database
-const mongoURI = 'mongodb://localhost:27017/cactus_pinterest';
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/cactus_pinterest';
 mongoose.connect(mongoURI, { useMongoClient: true});
 mongoose.Promise = global.Promise;
 
