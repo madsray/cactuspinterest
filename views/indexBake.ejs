@@ -5,6 +5,7 @@
     <title>INDEX</title>
   </head>
   <body>
+    <% include ../partials/home.ejs %>
     <h1>Index Bake</h1>
     <% for (let cactus of bakeCactus){%>
       <a href="<%=cactus._id%>"><img src="<%=cactus.url%>"></a>
