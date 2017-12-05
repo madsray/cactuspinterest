@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(override('_method'));
-
+app.use(express.static('public'));
 app.use('/cactus', cactusController);
 app.use('/comments', commentsController);
 

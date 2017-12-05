@@ -33,11 +33,9 @@ router.get('/:id/edit', async (req,res) => {
 //+++++++++++++UPDATE ROUTE++++++++++++++++++++
 router.put('/:id', async (req,res) => {
   try{
-    const findCactus = await Cactus.findById(req.params.id);
     const updateCactus = await Comments.findByIdAndUpdate(req.params.id, req.body);
 
-  console.log(findCactus);
-    // res.redirect('/cactus/' + req.params.id);
+    res.redirect('/cactus/'+ updateCactus.cactus);
   } catch (err){
     res.send(err.message);
   }
