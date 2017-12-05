@@ -14,8 +14,9 @@
     <% for (let comment of manyComments) { %>
       <h1><%= comment.author %>:<%= comment.content %> </h1>
       <form action="/comments/<%=comment._id%>?_method=DELETE" method=POST>
-      <button ><span class="glyphicon glyphicon-trash"></span></button>
-    </form>
+        <button ><span class="glyphicon glyphicon-trash"></span></button>
+      </form>
+      <a href="/comments/<%=comment._id%>/edit">EDIT</a>
   <% } %>
     <h3>Add a comment</h3>
     <form action="/comments" method="POST">

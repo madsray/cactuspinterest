@@ -8,12 +8,12 @@
   <body>
     <% include ../partials/home.ejs %>
     <h1>Edit</h1>
-    <form action="/comments/<%=Comments._id%>?_method=PUT" method="POST">
-      Author: <input type="text" name="author" value="<%=Comments.author%>"/>
-      Content: <input type="text" name="content" value="<%=Comments.content%>"/>
+    <form action="/comments/<%=updateCactus.id%>?_method=PUT" method="POST">
+      Author: <input type="text" name="author" value="<%=updateCactus.author%>"/>
+      Content: <input type="text" name="content" value="<%=updateCactus.content%>"/>
       <input type="submit" name="" value="Submit Changes"/>
 
-      <a href="/cactus/edit/"
+
     </form>
   </body>
 </html>

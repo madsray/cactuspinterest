@@ -19,6 +19,30 @@ router.post('/', async (req,res) => {
     res.send(err.message);
   }
 });
+// +++++++++++++++EDIT ROUTE++++++++++++++++++++
+router.get('/:id/edit', async (req,res) => {
+  try {
+    const updateCactus = await Comments.findById(req.params.id);
+
+    res.render('../views/edit.ejs', {updateCactus});
+  } catch (err) {
+
+    res.send(err.message);
+  }
+})
+//+++++++++++++UPDATE ROUTE++++++++++++++++++++
+router.put('/:id', async (req,res) => {
+  try{
+    const findCactus = await Cactus.findById(req.params.id);
+    const updateCactus = await Comments.findByIdAndUpdate(req.params.id, req.body);
+
+  console.log(findCactus);
+    // res.redirect('/cactus/' + req.params.id);
+  } catch (err){
+    res.send(err.message);
+  }
+})
+
 //++++++++++++++DELETE ROUTE++++++++++++++++++++++++
 router.delete('/:id', async (req, res) => {
    const deleteComment = await Comments.findByIdAndRemove(req.params.id);
