@@ -11,30 +11,32 @@
 
     <h2>Add a New Cactus Photo!</h2>
     <form action="/cactus/bake" method="POST">
-    <label>
-      <span>Image: </span>
-      <input type"text" name="url" placeholder="url for image"></input>
-    </label>
-    <label>
-      <span>Title: </span>
-      <input type"text" name="title" placeholder="Enter a title for this idea!"></input>
-    </label>
-    <label>
-      <span>Description: </span>
-      <input type"text" name="description" placeholder="Tell us about this idea."></input>
-    </label>
-    <label for="category">Category: </label>
+      <label for="category">Category: </label>
 
-      <select name="category">
-        <option value="Bake">Baking</option>
-        <option value="Crafts">Crafts</option>
-        <option value="Plants">Plants</option>
-        <option value="Clothes">Clothes</option>
-      </select>
+        <select name="category">
+          <option value="Bake">Baking</option>
+          <option value="Crafts">Crafts</option>
+          <option value="Plants">Plants</option>
+          <option value="Clothes">Clothes</option>
+        </select>
 
-    <label>
+      <label>
+    </form>
+      <label>
+        <span>Image: </span>
+        <input type"text" name="url" placeholder="url for image"></input>
+      </label>
+      <label>
+        <span>Title: </span>
+        <input type"text" name="title" placeholder="Enter a title for this idea!"></input>
+      </label>
+      <label for="bio">
+        <span>Description: </span>
+      </label>
+      <br>
+        <textarea type="number" id="bio"  name="description"/> Tell me about your idea!</textarea>
       <input type="submit" value="submit" />
     </label>
-  </form>
+
   </body>
 </html>
