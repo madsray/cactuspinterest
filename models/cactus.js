@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cactusSchema = mongoose.Schema({
   url: { type: String, require: true },
   title: String,
+  description: String,
   category: {type: String, require: true}
 });
 

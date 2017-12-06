@@ -9,7 +9,8 @@
 
     <h1>Show</h1>
     <img src="<%=oneCactus.url%>" alt="Cactus Picture"class="img-responsive center-block">
-
+    <h1><%=oneCactus.title%></h1>
+    <p><%= oneCactus.description%></p>
     <% for (let comment of manyComments) { %>
       <h1><%= comment.author %>:<%= comment.content %> </h1>
       <form action="/comments/<%=comment._id%>?_method=DELETE" method=POST>
