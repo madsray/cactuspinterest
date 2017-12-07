@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+<link rel="stylesheet" href="/show.css">
     <% include ../partials/head.ejs %>
   </head>
   <body>
     <% include ../partials/home.ejs %>
-
-    <h1>Show</h1>
-    <img src="<%=oneCactus.url%>" alt="Cactus Picture"class="img-responsive center-block">
     <h1><%=oneCactus.title%></h1>
-    <p><%= oneCactus.description%></p>
 
+    <img src="<%=oneCactus.url%>" alt="Cactus Picture"class="img-responsive center-block">
+    <h2>Description:</h2>
+    <p><%= oneCactus.description%></p>
+<h2>Comments:</h2>
+<div class="container">
     <% for (let comment of manyComments) { %>
-      <h1><%= comment.author %>:<%= comment.content %> </h1>
+    <div id="comment">
+      <p><%= comment.author %>: <%= comment.content %> </p>
+      </div>
+      <div id="trash">
       <form action="/comments/<%=comment._id%>?_method=DELETE" method=POST>
-        <button ><span class="glyphicon glyphicon-trash"></span></button>
+      <button><span class="glyphicon glyphicon-trash"></span></button>
       </form>
-      <a href="/comments/<%=comment._id%>/edit">EDIT</a>
+      </div>
+      <div id="edit">
+      <button><a href="/comments/<%=comment._id%>/edit"><span class="glyphicon glyphicon-pencil"></span></a></button>
+      </div>
+
   <% } %>
+</div>
     <h3>Add a comment</h3>
+  <div class="form">
     <form action="/comments" method="POST">
+
       <input type="text" name="author" placeholder="Your Name Here"/>
+
+
       <input type="text" name="content"placeholder="Your Comment Here" />
+
+
       <input type="hidden" name="cactus" value="<%= oneCactus._id %>"/>
+
+
       <input type="submit" />
+
     </form>
+  </div>
   </body>
 </html>
