@@ -1,0 +1,8 @@
+.HOME {
+  padding: 20px;
+  width: 100px;
+}
+.HOME:hover{
+  transition-duration: 3s;
+  transform: rotate(360deg);
+}

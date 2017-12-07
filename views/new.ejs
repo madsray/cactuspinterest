@@ -1,42 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <% include ../partials/head.ejs %>
+    <link rel="stylesheet" href="/new.css">
+
+    <link
   </head>
   <body>
     <% include ../partials/home.ejs %>
 
-    <h1>New</h1>
-
     <h2>Add a New Cactus Photo!</h2>
-    <form action="/cactus/bake" method="POST">
-      <label for="category">Category: </label>
 
-        <select name="category">
-          <option value="Bake">Baking</option>
-          <option value="Crafts">Crafts</option>
-          <option value="Plants">Plants</option>
-          <option value="Clothes">Clothes</option>
-        </select>
-
-      <label>
-    </form>
-      <label>
-        <span>Image: </span>
-        <input type"text" name="url" placeholder="url for image"></input>
-      </label>
-      <label>
-        <span>Title: </span>
-        <input type"text" name="title" placeholder="Enter a title for this idea!"></input>
-      </label>
-      <label for="bio">
-        <span>Description: </span>
-      </label>
       <br>
-        <textarea type="number" id="bio"  name="description"/> Tell me about your idea!</textarea>
-      <input type="submit" value="submit" />
-    </label>
+      <div class='container'>
+        <div class="row1">
+          <label>
+            <span>Image: </span>
+            <input type"text" name="url" placeholder="url for image"></input>
+          </label>
+        </div>
+      <br>
+        <div class="row2">
+          <label>
+            <span>Title: </span>
+            <input type"text" name="title" placeholder="Enter a title for this idea!"></input>
+          </label>
+        </div>
+      <br>
+        <div class="row3">
+          <label for="bio">
+            <span>Description: </span>
+          </label>
+      
+            <textarea type="number" id="bio"  name="description"/> Tell me about your idea!</textarea>
+        </div>
+      <br>
+        <div class="row5">
+          <form action="/cactus/bake" method="POST">
+            <label for="category"><span>Category: </span></label>
+              <select name="category">
+                <option value="Bake">Baking</option>
+                <option value="Crafts">Crafts</option>
+                <option value="Plants">Plants</option>
+                <option value="Clothes">Clothes</option>
+              </select>
+            </form>
+        </div>
+      <br>
+        <div class="row6">
+          <label>
+            <input type="submit" value="submit" />
+          </label>
+        </div>
+      </div>
 
+          <img id="bottom"src="https://i.imgur.com/CSiq91Q.png">
   </body>
 </html>
