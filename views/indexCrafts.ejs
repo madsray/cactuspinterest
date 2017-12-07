@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
+<% include ../partials/indexStyle.ejs %>
     <% include ../partials/head.ejs %>
   </head>
   <body>
     <% include ../partials/home.ejs %>
-    <h1>Index Crafts</h1>
+    <h1>Crafts</h1>
+    <div class="containerB">
     <% for (let cactus of craftsCactus){%>
-      <a href="<%=cactus._id%>"><img src="<%=cactus.url%>"></a>
+      <a href="<%=cactus._id%>"><img class="imgI" src="<%=cactus.url%>"></a>
   <% } %>
+</div>
   </body>
 </html>

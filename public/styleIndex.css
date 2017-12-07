@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 body {
   background-color: darkgray !important;
+}
+h1{
+  font-size: 100px!important;
+  color: #86cc6a !important;
+  text-align: center;
+font-family: 'Indie Flower', cursive!important;
 }
 .containerB{
   width: 100% !important;
@@ -15,4 +22,12 @@ body {
   border-radius: 100px;
   padding: 10px;
 
+}
+.HOME {
+  padding: 20px;
+  width: 100px;
+}
+.HOME:hover{
+  transition-duration: 3s;
+  transform: rotate(360deg);
 }

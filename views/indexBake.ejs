@@ -7,12 +7,12 @@
   </head>
   <body>
     <% include ../partials/home.ejs %>
-    <h1>Index Bake</h1>
+    <h1>Bake</h1>
     <div class="containerB">
     <% for (let cactus of bakeCactus){%>
 
       <a  href="<%=cactus._id%>"><img class="imgI" src="<%=cactus.url%>" alt="<%=cactus.title%>"></a>
-      
+
   <% } %>
     </div>
   </body>
