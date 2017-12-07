@@ -1,0 +1,18 @@
+body {
+  background-color: darkgray !important;
+}
+.containerB{
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap!important;
+  justify-content: center;
+}
+.imgI{
+  width: auto!important;
+  height: 300px !important;
+  float: left;
+  border-radius: 100px;
+  padding: 10px;
+
+}
