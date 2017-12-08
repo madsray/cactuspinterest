@@ -14,16 +14,19 @@
 <h2>Comments:</h2>
 <div class="container">
     <% for (let comment of manyComments) { %>
-    <div id="comment">
-      <p><%= comment.author %>: <%= comment.content %> </p>
-      </div>
+<div class="row">
+        <div id="comment">
+          <p><%= comment.author %>: <%= comment.content %> </p>
+        </div>
+        
       <div id="trash">
-      <form action="/comments/<%=comment._id%>?_method=DELETE" method=POST>
-      <button><span class="glyphicon glyphicon-trash"></span></button>
-      </form>
+        <form action="/comments/<%=comment._id%>?_method=DELETE" method=POST>
+        <button><span class="glyphicon glyphicon-trash"></span></button>
+        </form>
       </div>
       <div id="edit">
-      <button><a href="/comments/<%=comment._id%>/edit"><span class="glyphicon glyphicon-pencil"></span></a></button>
+        <button><a href="/comments/<%=comment._id%>/edit"><span class="glyphicon glyphicon-pencil"></span></a></button>
+      </div>
       </div>
 
   <% } %>
