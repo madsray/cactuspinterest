@@ -14,3 +14,5 @@ I wanted to create a full stack application that combined my love for cactus and
 -I would also like to clean up the show and edit pages.
 -Another thought would have the cactus pots on the edit and new pages fall to the bottom when the pages loads
 -in general, I would just like to add more categories to my bag!
+# Images
+I do not own any of the images. I found them on verious websites for free!
